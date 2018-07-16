@@ -2,7 +2,8 @@
 
 namespace Blog.Repositories
 {
-    public class Class1
+    public class Channel
     {
+
     }
 }
