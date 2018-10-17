@@ -39,9 +39,9 @@ namespace Blog.Repositories.EntityFramework
             this._EFContext.RegisterDeleted(aggregateRoot);
         }
 
-        protected override void DoGetByKey(Guid key)
+        protected override T DoGetByKey(Guid key)
         {
-            this._EFContext.Context.Set<T>().Find(key);
+            return this._EFContext.Context.Set<T>().Find(key);
         }
 
         protected override void DoUpdate(T aggregateRoot)
